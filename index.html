@@ -31,10 +31,11 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light pt-3 navbar_header w-100">
+    <!-- desktopnavbar -->
+    <nav class="navbar navbar-expand-lg d-none d-lg-block navbar-light pt-3 navbar_header w-100">
         <div class="container">
             <div>
-                <a class="navbar-brand" href="#"><img src="images/Logo.svg" alt="logo" title="Logo"
+                <a class="navbar-brand" href="#"><img src="images/logo.svg" alt="logo" title="Logo"
                         class="img-fluid"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,8 +85,53 @@
             </div>
         </div>
     </nav>
+    <!-- mobile navbar -->
+
+    <section class="d-lg-none navbar_header w-100">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center py-3 p-2">
+            <a class="navbar-brand" href="#">
+              <img src="images/logo.svg" alt="logo" style="width: 160px;" class="img-fluid">
+            </a>
+            <a class="btn bg_primary rounded shadow-none" data-bs-toggle="offcanvas" href="#mobile-navbar" role="button" aria-controls="mobile-navbar">
+              <span class="fa fa-bars fa-lg text-white bg_primary"></span>
+            </a>
+          </div>
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="mobile-navbar" aria-labelledby="mobile-navbarLabel">
+            <div class="offcanvas-header bg_lightgrey">
+              <a class="navbar-brand" href="#">
+                <img src="images/logo.svg" style="width: 160px;" alt="logo" class="img-fluid">
+              </a>
+              <button type="button" class="btn border-0 fs-24 p-0 shadow-none fw-600 text-white" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark fs-24"></i></button>
+            </div>
+            <div class="offcanvas-body bg_lightgrey py-0">
+              <ul class="dropdown mt-3 list-unstyled">
+                <button class="btn dropdown-toggle ps-0 shadow-none" type="button" data-bs-toggle="dropdown">
+                  Categories
+                </button>
+                <ul class="dropdown-menu fs-15">
+                  <li><a class="dropdown-item text_black" href="#">Services</a></li>
+                  <li><a class="dropdown-item text_black" href="#">Know more</a></li>
+                </ul>
+                <li class="nav-item fs-15">
+                  <a class="nav-link text_black ps-0" aria-current="page" href="#">Deals</a>
+                </li>
+                <li class="nav-item fs-15">
+                  <a class="nav-link text_black ps-0" href="#">What's New</a>
+                </li>
+                <li class="nav-item fs-15">
+                  <a class="nav-link text_black ps-0" href="#">Delivery</a>
+                </li>
+              </ul>
+              <a href="" class="btn px-0 text_darkgreen fw-600 ">
+                <i class="fa-regular fa-user me-2 "></i><span class=" fs-15 p-0"> Login</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
     <!-- banner section -->
-    <section class="position-relative">
+    <section class="position-relative d-none d-lg-block">
         <div class="container-fluid p-0">
             <img src="images/banner.webp" alt="banner" class="img-fluid w-100">
 
@@ -193,33 +239,45 @@
 
         </div>
     </section>
-
+    <section class="position-relative d-lg-none">
+        <div class="container-fluid p-0">
+            <img src="images/mobile-banner.webp" alt="banner" class="img-fluid w-100">
+        </div>
+        <div class="container">
+            <div class="mobilebannerform">
+                <h3 class="fs-28 fw-600 text-white">Find your dream place</h3>
+                <p class="fs-14 text-white font-mulish fw-500">Find your dream home easily and quickly here</p>
+                
+            </div>
+           
+        </div>
+    </section>
     <!-- Featured section -->
-    <section class="py-5 mt-4">
+    <section class="py-md-5 mt-4">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <h2 class="fs-40 text_darkblack fw-600 text-center">Featured properties</h2>
                     <p class="fs-14 fw-400 text_grey mb-4 text-center">Lorem ipsum dolor sit amet, consectetur
                         adipiscing elit. Integer vel lobortis justo</p>
-                    <ul class="nav nav-pills featured_tabs mb-5 d-flex justify-content-center" id="pills-tab"
+                    <ul class="nav nav-pills featured_tabs mb-4 d-flex justify-content-md-center" id="pills-tab"
                         role="tablist">
-                        <li class="nav-item" role="presentation">
+                        <li class="nav-item mb-3" role="presentation">
                             <button class="nav-link br-10 me-2 fs-14  active" id="pills-houses-tab"
                                 data-bs-toggle="pill" data-bs-target="#pills-houses" type="button" role="tab"
                                 aria-controls="pills-houses" aria-selected="true">Houses</button>
                         </li>
-                        <li class="nav-item" role="presentation">
+                        <li class="nav-item mb-3" role="presentation">
                             <button class="nav-link br-10 me-2 fs-14" id="pills-smarthome-tab" data-bs-toggle="pill"
                                 data-bs-target="#pills-smarthome" type="button" role="tab"
                                 aria-controls="pills-smarthome" aria-selected="false">Smart home</button>
                         </li>
-                        <li class="nav-item" role="presentation">
+                        <li class="nav-item mb-3" role="presentation">
                             <button class="nav-link br-10 me-2 fs-14" id="pills-apartment-tab" data-bs-toggle="pill"
                                 data-bs-target="#pills-apartment" type="button" role="tab"
                                 aria-controls="pills-apartment" aria-selected="false">Apartment</button>
                         </li>
-                        <li class="nav-item" role="presentation">
+                        <li class="nav-item mb-3" role="presentation">
                             <button class="nav-link br-10 fs-14" id="pills-office-tab" data-bs-toggle="pill"
                                 data-bs-target="#pills-office" type="button" role="tab" aria-controls="pills-office"
                                 aria-selected="false">Office</button>
@@ -482,18 +540,683 @@
             <p class="fs-14 fw-400 text_grey mb-4 text-center">Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit. Integer vel lobortis justo</p>
 
-            <div class="buildingsNeighbor owl-carousel owl-theme">
-                <div class="item"><img src="images/building.png" alt="Building" class="img-fluid"></div>
-                <div class="item"><img src="images/building.png" alt="Building" class="img-fluid"></div>
-                <div class="item"><img src="images/building.png" alt="Building" class="img-fluid"></div>
-                <div class="item"><img src="images/building.png" alt="Building" class="img-fluid"></div>
-                <div class="item"><img src="images/building.png" alt="Building" class="img-fluid"></div>
-                <div class="item"><img src="images/building.png" alt="Building" class="img-fluid"></div>
+            <div class="buildingsNeighbor owlDots owl-carousel owl-theme">
+                <div class="item px-md-1 px-2 imghover"><img src="images/building.png" alt="Building" class="img-fluid">
+                    <div class="img_description">
+                        <h4 class="fs-100 fw-100 text-center">+</h4>
+                    </div>
+                    <div class="imgtext">
+                        <p class="text-white mb-1 fs-18 fw-600">Mississauga</p>
+                        <p class="fs-14 fw-400 text-white">1570 Listing</p>
+                    </div>
+                </div>
+                <div class="item px-md-1 px-2 imghover"><img src="images/building.png" alt="Building" class="img-fluid">
+                    <div class="img_description">
+                        <h4 class="fs-100 fw-100 text-center">+</h4>
+                    </div>
+                    <div class="imgtext">
+                        <p class="text-white mb-1 fs-18 fw-600">Mississauga</p>
+                        <p class="fs-14 fw-400 text-white">1570 Listing</p>
+                    </div>
+                </div>
+                <div class="item px-md-1 px-2 imghover"><img src="images/building.png" alt="Building" class="img-fluid">
+                    <div class="img_description">
+                        <h4 class="fs-100 fw-100 text-center">+</h4>
+                    </div>
+                    <div class="imgtext">
+                        <p class="text-white mb-1 fs-18 fw-600">Toranto</p>
+                        <p class="fs-14 fw-400 text-white">1570 Listing</p>
+                    </div>
+                </div>
+                <div class="item px-md-1 px-2 imghover"><img src="images/building.png" alt="Building" class="img-fluid">
+                    <div class="img_description">
+                        <h4 class="fs-100 fw-100 text-center">+</h4>
+                    </div>
+                    <div class="imgtext">
+                        <p class="text-white mb-1 fs-18 fw-600">Mississauga</p>
+                        <p class="fs-14 fw-400 text-white">1570 Listing</p>
+                    </div>
+                </div>
+                <div class="item px-md-1 px-2 imghover"><img src="images/building.png" alt="Building" class="img-fluid">
+                    <div class="img_description">
+                        <h4 class="fs-100 fw-100 text-center">+</h4>
+                    </div>
+                    <div class="imgtext">
+                        <p class="text-white mb-1 fs-18 fw-600">North America</p>
+                        <p class="fs-14 fw-400 text-white">1570 Listing</p>
+                    </div>
+                </div>
+                <div class="item px-md-1 px-2"><img src="images/building.png" alt="Building" class="img-fluid">
+                    <div class="img_description">
+                        <h4 class="fs-100 fw-100 text-center">+</h4>
+                    </div>
+                    <div class="imgtext">
+                        <p class="text-white mb-1 fs-18 fw-600">Edmornton</p>
+                        <p class="fs-14 fw-400 text-white">1570 Listing</p>
+                    </div>
+                </div>
+                <div class="item px-md-1 px-2"><img src="images/building.png" alt="Building" class="img-fluid">
+                    <div class="img_description">
+                        <h4 class="fs-100 fw-100 text-center">+</h4>
+                    </div>
+                    <div class="imgtext">
+                        <p class="text-white mb-1 fs-18 fw-600">Edmornton</p>
+                        <p class="fs-14 fw-400 text-white">1570 Listing</p>
+                    </div>
+                </div>
             </div>
 
         </div>
     </section>
+    <!-- properties for sale -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="fs-40 text_darkblack fw-600 text-center">Properties for sale</h2>
+            <p class="fs-14 fw-400 text_grey mb-4 text-center">Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Integer vel lobortis justo</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-10 ">
+                    <div class="propertiesSale owlDots owl-carousel owl-theme">
+                        <div class="item px-2">
+                            <div class="card shadow_sm border-0 br-10 h-100">
+                                <div class="card-body">
+                                    <div>
+                                        <img src="images/aparment.png" alt="Apartment" title="Apartment"
+                                            class="img-fluid w-100">
 
+                                    </div>
+                                    <div class="img-label">
+                                        <div class="mb-1">
+                                            <img src="images/featured-label.svg" alt="featured" class="img-fluid">
+
+                                        </div>
+                                        <div>
+                                            <img src="images/forsale-label.svg" alt="forsale" class="img-fluid">
+
+                                        </div>
+                                    </div>
+                                    <div class="save_wishlist text-end">
+                                        <span class="fs-14 text-orange"><i
+                                                class="fa-regular fa-bookmark me-1"></i></span>
+                                    </div>
+
+                                    <p class="fs-18 fw-600 mt-2 mb-1 text_darkblack">Gorgeous Apartment Building
+                                    </p>
+                                    <p class="fs-12 fw-400 mb-4 mt-2 text_lightgrey"><i
+                                            class="fa-solid text_grey fa-map me-1"></i> 58 Hullbrook Road,
+                                        Billesley, B13 0LA</p>
+                                    <p class="fs-18 fw-600 text-orange">$7,500</p>
+                                    <p class="text_lightgrey fs-14 fw-400"><span><i
+                                                class="fa-solid fa-bed text_grey me-1"></i>Beds: <b>4</b></span>
+                                        <span><i class="fa-solid fa-bath ms-2 me-1 text_grey"></i>Baths:
+                                            <b>2</b></span> <span><i
+                                                class="fa-solid fa-chart-area ms-2 me-1 text_grey"></i>Sqft:
+                                            <b>1120</b></span>
+                                    </p>
+                                    <hr>
+                                    <div class="mt-4 d-flex justify-content-between">
+                                        <p class="fs-14 text_darkblack fw-500"><i
+                                                class="fa-solid fa-plus text-orange me-1 fs-12"></i>Compare</p>
+                                        <p class="fs-14 text_darkblack fw-500">3 Years Ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5 yellow_gradient">
+        <div class="container">
+            <h2 class="fs-40 text-white fw-600 text-center">Search for your dream home </h2>
+            <p class="fs-14 fw-400 text-white text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Fusce sed tristique metus proin id lorem odio</p>
+            <div class="d-flex mt-4 justify-content-center gap-2">
+                <p class="align-self-center"><i class="fa-solid fa-phone-volume text-white me-2 fs-34"></i></p>
+                <div>
+                    <p class="fs-14 fw-400 mb-1 text-white">Request a call back</p>
+                    <p class="fs-26 text-white fw-600">314-555-0123</p>
+                </div>
+
+            </div>
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-12">
+                    <div class="dreamHome owlDots owl-carousel owl-theme">
+                        <div class="item px-2">
+                            <div class="card shadow_sm border-0 br-10 h-100">
+                                <div class="card-body">
+                                    <div>
+                                        <img src="images/aparment.png" alt="Apartment" title="Apartment"
+                                            class="img-fluid w-100">
+
+                                    </div>
+                                    <div class="img-label">
+                                        <div class="mb-1">
+                                            <img src="images/featured-label.svg" alt="featured" class="img-fluid">
+
+                                        </div>
+                                        <div>
+                                            <img src="images/forsale-label.svg" alt="forsale" class="img-fluid">
+
+                                        </div>
+                                    </div>
+                                    <div class="save_wishlist text-end">
+                                        <span class="fs-14 text-orange"><i
+                                                class="fa-regular fa-bookmark me-1"></i></span>
+                                    </div>
+
+                                    <p class="fs-18 fw-600 mt-2 mb-1 text_darkblack">Gorgeous Apartment Building
+                                    </p>
+                                    <p class="fs-12 fw-400 mb-4 mt-2 text_lightgrey"><i
+                                            class="fa-solid text_grey fa-map me-1"></i> 58 Hullbrook Road,
+                                        Billesley, B13 0LA</p>
+                                    <p class="fs-18 fw-600 text-orange">$7,500</p>
+                                    <p class="text_lightgrey fs-14 fw-400"><span><i
+                                                class="fa-solid fa-bed text_grey me-1"></i>Beds: <b>4</b></span>
+                                        <span><i class="fa-solid fa-bath ms-2 me-1 text_grey"></i>Baths:
+                                            <b>2</b></span> <span><i
+                                                class="fa-solid fa-chart-area ms-2 me-1 text_grey"></i>Sqft:
+                                            <b>1120</b></span>
+                                    </p>
+                                    <hr>
+                                    <div class="mt-4 d-flex justify-content-between">
+                                        <p class="fs-14 text_darkblack fw-500"><i
+                                                class="fa-solid fa-plus text-orange me-1 fs-12"></i>Compare</p>
+                                        <p class="fs-14 text_darkblack fw-500">3 Years Ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item px-2">
+                            <div class="card shadow_sm border-0 br-10 h-100">
+                                <div class="card-body">
+                                    <div>
+                                        <img src="images/aparment.png" alt="Apartment" title="Apartment"
+                                            class="img-fluid w-100">
+
+                                    </div>
+                                    <div class="img-label">
+                                        <div class="mb-1">
+                                            <img src="images/featured-label.svg" alt="featured" class="img-fluid">
+
+                                        </div>
+                                        <div>
+                                            <img src="images/forsale-label.svg" alt="forsale" class="img-fluid">
+
+                                        </div>
+                                    </div>
+                                    <div class="save_wishlist text-end">
+                                        <span class="fs-14 text-orange"><i
+                                                class="fa-regular fa-bookmark me-1"></i></span>
+                                    </div>
+
+                                    <p class="fs-18 fw-600 mt-2 mb-1 text_darkblack">Gorgeous Apartment Building
+                                    </p>
+                                    <p class="fs-12 fw-400 mb-4 mt-2 text_lightgrey"><i
+                                            class="fa-solid text_grey fa-map me-1"></i> 58 Hullbrook Road,
+                                        Billesley, B13 0LA</p>
+                                    <p class="fs-18 fw-600 text-orange">$7,500</p>
+                                    <p class="text_lightgrey fs-14 fw-400"><span><i
+                                                class="fa-solid fa-bed text_grey me-1"></i>Beds: <b>4</b></span>
+                                        <span><i class="fa-solid fa-bath ms-2 me-1 text_grey"></i>Baths:
+                                            <b>2</b></span> <span><i
+                                                class="fa-solid fa-chart-area ms-2 me-1 text_grey"></i>Sqft:
+                                            <b>1120</b></span>
+                                    </p>
+                                    <hr>
+                                    <div class="mt-4 d-flex justify-content-between">
+                                        <p class="fs-14 text_darkblack fw-500"><i
+                                                class="fa-solid fa-plus text-orange me-1 fs-12"></i>Compare</p>
+                                        <p class="fs-14 text_darkblack fw-500">3 Years Ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item px-2">
+                            <div class="card shadow_sm border-0 br-10 h-100">
+                                <div class="card-body">
+                                    <div>
+                                        <img src="images/aparment.png" alt="Apartment" title="Apartment"
+                                            class="img-fluid w-100">
+
+                                    </div>
+                                    <div class="img-label">
+                                        <div class="mb-1">
+                                            <img src="images/featured-label.svg" alt="featured" class="img-fluid">
+
+                                        </div>
+                                        <div>
+                                            <img src="images/forsale-label.svg" alt="forsale" class="img-fluid">
+
+                                        </div>
+                                    </div>
+                                    <div class="save_wishlist text-end">
+                                        <span class="fs-14 text-orange"><i
+                                                class="fa-regular fa-bookmark me-1"></i></span>
+                                    </div>
+
+                                    <p class="fs-18 fw-600 mt-2 mb-1 text_darkblack">Gorgeous Apartment Building
+                                    </p>
+                                    <p class="fs-12 fw-400 mb-4 mt-2 text_lightgrey"><i
+                                            class="fa-solid text_grey fa-map me-1"></i> 58 Hullbrook Road,
+                                        Billesley, B13 0LA</p>
+                                    <p class="fs-18 fw-600 text-orange">$7,500</p>
+                                    <p class="text_lightgrey fs-14 fw-400"><span><i
+                                                class="fa-solid fa-bed text_grey me-1"></i>Beds: <b>4</b></span>
+                                        <span><i class="fa-solid fa-bath ms-2 me-1 text_grey"></i>Baths:
+                                            <b>2</b></span> <span><i
+                                                class="fa-solid fa-chart-area ms-2 me-1 text_grey"></i>Sqft:
+                                            <b>1120</b></span>
+                                    </p>
+                                    <hr>
+                                    <div class="mt-4 d-flex justify-content-between">
+                                        <p class="fs-14 text_darkblack fw-500"><i
+                                                class="fa-solid fa-plus text-orange me-1 fs-12"></i>Compare</p>
+                                        <p class="fs-14 text_darkblack fw-500">3 Years Ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item px-2">
+                            <div class="card shadow_sm border-0 br-10 h-100">
+                                <div class="card-body">
+                                    <div>
+                                        <img src="images/aparment.png" alt="Apartment" title="Apartment"
+                                            class="img-fluid w-100">
+
+                                    </div>
+                                    <div class="img-label">
+                                        <div class="mb-1">
+                                            <img src="images/featured-label.svg" alt="featured" class="img-fluid">
+
+                                        </div>
+                                        <div>
+                                            <img src="images/forsale-label.svg" alt="forsale" class="img-fluid">
+
+                                        </div>
+                                    </div>
+                                    <div class="save_wishlist text-end">
+                                        <span class="fs-14 text-orange"><i
+                                                class="fa-regular fa-bookmark me-1"></i></span>
+                                    </div>
+
+                                    <p class="fs-18 fw-600 mt-2 mb-1 text_darkblack">Gorgeous Apartment Building
+                                    </p>
+                                    <p class="fs-12 fw-400 mb-4 mt-2 text_lightgrey"><i
+                                            class="fa-solid text_grey fa-map me-1"></i> 58 Hullbrook Road,
+                                        Billesley, B13 0LA</p>
+                                    <p class="fs-18 fw-600 text-orange">$7,500</p>
+                                    <p class="text_lightgrey fs-14 fw-400"><span><i
+                                                class="fa-solid fa-bed text_grey me-1"></i>Beds: <b>4</b></span>
+                                        <span><i class="fa-solid fa-bath ms-2 me-1 text_grey"></i>Baths:
+                                            <b>2</b></span> <span><i
+                                                class="fa-solid fa-chart-area ms-2 me-1 text_grey"></i>Sqft:
+                                            <b>1120</b></span>
+                                    </p>
+                                    <hr>
+                                    <div class="mt-4 d-flex justify-content-between">
+                                        <p class="fs-14 text_darkblack fw-500"><i
+                                                class="fa-solid fa-plus text-orange me-1 fs-12"></i>Compare</p>
+                                        <p class="fs-14 text_darkblack fw-500">3 Years Ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-md-5 py-4">
+        <div class="container">
+            <h2 class="fs-40 text_black fw-600 text-center">Why choose us </h2>
+            <p class="fs-14 fw-400 text_grey text-center">Save your time and effort with our tools</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="row flex-nowrap overflow-auto">
+                        <div class="col-10 col-md-4 mb-3">
+                            <p class=" fs-52 mb-2 text-center"><i class="fa-solid fa-stopwatch-20  text-orange"></i></p>
+                            <p class="fs-16 text-center mb-0 fw-600 text_darkblack">Thousands of posts</p>
+
+                            <div class="p-3">
+                                <img src="images/chooseus-img.png" alt="choose us" title="chooseus"
+                                    class="img-fluid w-100">
+                                <p class="text_lightgrey mt-3 mb-2 fs-14 text-center fw-400">The lists are always
+                                    refreshed and
+                                    updated constantly, you will never miss</p>
+                                <div class="text-center ">
+                                    <button class="btn border-0 fw-600 text_darkblack  shadow-none fs-16">See all
+                                        listings <i class="fa-solid fa-arrow-right-long ms-2"></i></button>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-10 col-md-4 mb-3">
+                            <p class=" fs-52 mb-2 text-center text-orange fw-400"><i
+                                    class="fa-solid fa-filter-circle-dollar"></i></p>
+                            <p class="fs-16 text-center mb-0 fw-600 text_darkblack">Smart filter</p>
+
+                            <div class="p-3">
+                                <img src="images/chooseus-img.png" alt="choose us" title="chooseus"
+                                    class="img-fluid w-100">
+                                <p class="text_lightgrey mt-3 mb-2 fs-14 text-center fw-400">Find the right house for
+                                    you in the shortest amount of time</p>
+                                <div class="text-center ">
+                                    <button class="btn border-0 fw-600 text_darkblack  shadow-none fs-16">See all
+                                        listings <i class="fa-solid fa-arrow-right-long ms-2"></i></button>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-10 col-md-4 mb-3">
+                            <p class=" fs-52 mb-2 text-center text-orange fw-400"><i class="fa-solid fa-headset"></i>
+                            </p>
+                            <p class="fs-16 text-center mb-0 fw-600 text_darkblack">Great Support</p>
+
+                            <div class="p-3">
+                                <img src="images/chooseus-img.png" alt="choose us" title="chooseus"
+                                    class="img-fluid w-100">
+                                <p class="text_lightgrey mt-3 mb-2 fs-14 text-center fw-400">After-sales care service,
+                                    helpful advice to avoid scams</p>
+                                <div class="text-center ">
+                                    <button class="btn border-0 fw-600 text_darkblack  shadow-none fs-16">See all
+                                        listings <i class="fa-solid fa-arrow-right-long ms-2"></i></button>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <p class="fs-16 mb-4 text_black text-center fw-600">Trusted by over 150+ major companies</p>
+                    <div class="row">
+                        <div class="col-4 col-md-3 col-lg-2 mb-3 text-center">
+                            <img src="images/componies.svg" alt="componies" class="img-fluid" title="Trusted Companies">
+                        </div>
+                        <div class="col-4 col-md-3 col-lg-2 mb-3 text-center">
+                            <img src="images/componies2.svg" alt="componies" class="img-fluid"
+                                title="Trusted Companies">
+
+                        </div>
+                        <div class="col-4 col-md-3 col-lg-2 mb-3 text-center">
+                            <img src="images/componies.svg" alt="componies" class="img-fluid" title="Trusted Companies">
+
+                        </div>
+                        <div class="col-4 col-md-3 col-lg-2 mb-3 text-center">
+                            <img src="images/componies2.svg" alt="componies" class="img-fluid"
+                                title="Trusted Companies">
+
+                        </div>
+                        <div class="col-4 col-md-3 col-lg-2 mb-3 text-center">
+                            <img src="images/componies.svg" alt="componies" class="img-fluid" title="Trusted Companies">
+
+                        </div>
+                        <div class="col-4 col-md-3 col-lg-2 mb-3 text-center">
+                            <img src="images/componies2.svg" alt="componies" class="img-fluid"
+                                title="Trusted Companies">
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pb-5 mt-5 secondary_gradient ">
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="row">
+                        <div class="col-md-8 col-lg-7  pe-md-0">
+
+                            <div class="card bg_primary border-0">
+                                <div class="card-body pt-5 text-center">
+
+                                    <p class="fs-16 text-white"><i>“ Lorem ipsum dolor sit amet, consectetur adipiscing
+                                            elit.
+                                            Integer
+                                            vel tortor justo. Vestibulum vitae vulputate lacus. Aliquam sollicitudin
+                                            mauris
+                                            odio. Fusce
+                                            egestas consectetur semper vulputate ”</i></p>
+                                    <p class="fs-14 text-white"><i class="fa-solid fs-24 fa-comments"></i></p>
+                                    <p class="fs-16 text-white fw-600 mb-2">Esther Howard</p>
+                                    <p class="fs-14 text-white">Internet Security Assistant</p>
+                                </div>
+                                <div class="testimonials_img">
+                                    <img src="images/testimonial.png" alt="testimonials" class="img-fluid">
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-md-4 col-lg-5 ps-md-0 mt-md-5">
+                            <div class="card mt-md-5 border-0">
+                                <div class="card-body">
+                                    <h3 class="fs-40 fw-700">From our happy customers</h3>
+                                    <p class="fs-14 text_grey fw-400">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit. Fusce sed tristique metus proin id lorem odio</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class=" pt-3 pb-5">
+        <div class="container">
+            <h2 class="fs-40 text_black fw-600 text-center">From our blog </h2>
+            <p class="fs-14 fw-400 text_grey text-center">Save your time and effort with our tools</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="row flex-nowrap overflow-auto">
+                        <div class="col-10 col-md-4 mb-3">
+
+                            <div class="p-3">
+                                <img src="images/blogpost.png" alt="choose us" title="blogpost" class="img-fluid w-100">
+                                <p class="text_darkblack mt-3 mb-2 fs-14 text-center fw-600">Building gains into housing
+                                    stocks and how to trade the sector</p>
+                                <div class="text-center ">
+                                    <button class="btn border-0 fw-600 text-orange  shadow-none fs-16">Read More <i
+                                            class="fa-solid fa-arrow-right-long ms-2"></i></button>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-10 col-md-4 mb-3">
+
+                            <div class="p-3">
+                                <img src="images/blogpost.png" alt="choose us" title="blogpost" class="img-fluid w-100">
+                                <p class="text_darkblack mt-3 mb-2 fs-14 text-center fw-600">92% of millennial
+                                    homebuyers say inflation has impacted their plans</p>
+                                <div class="text-center ">
+                                    <button class="btn border-0 fw-600 text-orange  shadow-none fs-16">Read More <i
+                                            class="fa-solid fa-arrow-right-long ms-2"></i></button>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-10 col-md-4 mb-3">
+
+                            <div class="p-3">
+                                <img src="images/blogpost.png" alt="choose us" title="blogpost" class="img-fluid w-100">
+                                <p class="text_darkblack mt-3 mb-2 fs-14 text-center fw-600">We are hiring ‘moderately,’
+                                    says Compass CEO</p>
+                                <div class="text-center ">
+                                    <button class="btn border-0 fw-600 text-orange  shadow-none fs-16">Read More <i
+                                            class="fa-solid fa-arrow-right-long ms-2"></i></button>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg_secondary py-5 position-relative">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="row">
+                        <div class="col-md-7 col-xl-7 mb-3">
+                            <h3 class="fs-40 fw-600">Find for your dream home
+                                and increase your investment opportunities</h3>
+                            <p class="text_grey fs-14 fw-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Fusce sed tristique metus proin id lorem odio</p>
+                            <div class="mt-md-5">
+                                <button class="btn btn_primary fs-15 text-white fw-500"> <i
+                                        class="fa-solid fa-phone me-2"></i> Contact Seller</button>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-xl-5 mb-3 align-self-lg-center d-none d-md-block">
+                            <div>
+                                <img src="images/contact-seller.jpg" alt="contact" class="img-fluid br-10 w-100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg_darkblack py-5">
+        <div class="container">
+            <div class="row mt-4 justify-content-center">
+                <div class="col-lg-10">
+                    <div class="row">
+                        <div class="col-12 mb-5 mb-md-3 col-md-6">
+                            <div class="card h-100 br-10 position-relative border-0 bg_secondary">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-3 col-md-3 col-lg-2 ">
+                                            <p class="squarebox"></p>
+                                        </div>
+                                        <div class="col-9 col-md-9 col-lg-10">
+                                            <h3 class="fs-28 fw-600 text_darkblack mb-2">You need a house</h3>
+                                            <p class="fs-14 text_darkblack fw-400">Tell us your needs, we will give you
+                                                thousands of suggestions for the dream home.</p>
+                                        </div>
+                                    </div>
+                                    <div class="contactsellerbtn">
+                                        <button class="btn btn_primary fs-15 text-white fw-500"> <i
+                                                class="fa-solid fa-phone me-2"></i> Contact Seller</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3 col-md-6">
+                            <div class="card h-100 br-10 position-relative border-0 bg_secondary">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-3 col-md-3 col-lg-2 ">
+                                            <p class="squarebox"></p>
+                                        </div>
+                                        <div class="col-9 col-md-9 col-lg-10">
+                                            <h3 class="fs-28 fw-600 text_darkblack mb-2">Sell your house</h3>
+                                            <p class="fs-14 text_darkblack fw-400">Tell us your needs, we will give you
+                                                thousands of suggestions for the dream home.</p>
+                                        </div>
+                                    </div>
+                                    <div class="contactsellerbtn">
+                                        <button class="btn btn_primary fs-15 text-white fw-500"> <i
+                                                class="fa-solid fa-phone me-2"></i> Sell Property</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="border_bottom mt-5"></p>
+        <div class="container">
+            <div class="row mt-5 justify-content-center">
+                <div class="col-lg-10">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <h3 class="fs-18 fw-600 text-white mb-4">Office Address</h3>
+                            <p class="fs-14 text-white opacity-1 mb-2">Head office:</p>
+                            <span class="fs-14 text-white">2118 Thornridge Cir. Syracuse, Connecticut 35624</span>
+
+                            <p class="fs-14 text-white opacity-1 mt-4 mb-2">Branch:</p>
+                            <span class="fs-14 text-white fw-400">3891 Ranchview Dr. Richardson, California 62639</span>
+                            <p class="border_bottom my-2"></p>
+                            <span class="fs-14 text-white fw-400">2118 Thornridge Cir. Syracuse, Connecticut
+                                35624</span>
+
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <h3 class="fs-18 fw-600 text-white mb-4">Contact Seller</h3>
+                            <div class="d-flex gap-3 mb-4">
+                                <div>
+                                    <p class="fs-30 text-white opacity-1 "><i class="fa-solid fa-phone-volume"></i>
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="fs-14 text-white opacity-1 mb-2">Hotline:</p>
+                                    <p class="text-white mb-0">(201) 555-0124</p>
+                                </div>
+
+                            </div>
+                            <p class="border_bottom my-2"></p>
+                            <div class="d-flex gap-3">
+                                <div>
+                                    <p class="fs-30 text-white opacity-1"><i
+                                            class="fa-solid fa-envelope-circle-check"></i>
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="fs-14 text-white opacity-1 mb-2">Email:</p>
+                                    <p class="text-white mb-0">Realestatecp@gmail.com</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <h3 class="fs-18 fw-600 text-white mb-4">Our Company</h3>
+                            <p class="mb-2"> <i class="fa-solid fs-14 fa-chevron-right me-2  text-orange"></i><span
+                                    class="fs-14 opacity-2 text-white"> Property For Sale</span></p>
+                            <p class="mb-2"><i class="fa-solid fs-14 fa-chevron-right me-2  text-orange"></i><span
+                                    class="fs-14 opacity-2 text-white"> About Us</span></p>
+                            <p class="mb-2"><i class="fa-solid fs-14 fa-chevron-right me-2  text-orange"></i><span
+                                    class="fs-14 opacity-2 text-white"> Our Agents</span></p>
+                            <p class="mb-2"><i class="fa-solid fs-14 fa-chevron-right me-2  text-orange"></i><span
+                                    class="fs-14 opacity-2 text-white"> Terms Of Use</span></p>
+                            <p class="mb-2"><i class="fa-solid fs-14 fa-chevron-right me-2  text-orange"></i><span
+                                    class="fs-14 opacity-2 text-white"> Privacy Policy</span></p>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <h3 class="fs-18 fw-600 text-white mb-4">Newsletter</h3>
+                            <p class="mb-2 text-white fs-14 fw-400"> Sign up to receive the latest articles</span></p>
+                            <form>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control textfield py-2 fs-14 br-10 "
+                                        placeholder="Your Email Address" id="InputEmail1" aria-describedby="emailHelp">
+                                    <div class="mt-2">
+                                        <button class="btn btnsignup w-100 br-10 text-white">Sign Up <i
+                                                class="fa-solid fa-arrow-right-long ms-2"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
     <!-- bootstrap cdn -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
