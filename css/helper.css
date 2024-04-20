@@ -1,0 +1,155 @@
+.fs-12 {
+  font-size: 12px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.fs-15 {
+  font-size: 15px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.fs-18 {
+  font-size: 18px;
+}
+
+.fs-19 {
+  font-size: 19px;
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+
+.fs-22 {
+  font-size: 22px;
+}
+
+.fs-24 {
+  font-size: 24px;
+}
+
+.fs-26 {
+  font-size: 26px;
+}
+
+.fs-28 {
+  font-size: 28px;
+}
+
+.fs-30 {
+  font-size: 30px;
+}
+
+.fs-32 {
+  font-size: 32px;
+}
+
+.fs-34 {
+  font-size: 34px;
+}
+
+.fs-36 {
+  font-size: 36px;
+}
+
+.fs-40 {
+  font-size: 40px;
+}
+
+.fs-42 {
+  font-size: 42px;
+}
+
+.fs-46 {
+  font-size: 46px;
+}
+
+.fs-48 {
+  font-size: 48px;
+}
+
+.fs-52 {
+  font-size: 52px;
+}
+
+.fs-54 {
+  font-size: 54px;
+}
+
+.fs-60 {
+  font-size: 60px;
+}
+
+.fs-100 {
+  font-size: 100px;
+}
+
+.br-10 {
+  border-radius: 10px !important;
+}
+.fw-400 {
+  font-weight: 400 !important;
+}
+.fw-500 {
+  font-weight: 500 !important;
+}
+
+.fw-600 {
+  font-weight: 600 !important;
+}
+
+.fw-700 {
+  font-weight: 700 !important;
+}
+
+.opacity-1 {
+  opacity: 0.5;
+}
+
+.opacity-2 {
+  opacity: 0.75;
+}
+
+.text_black {
+  color: #000000;
+}
+.text_darkblack {
+  color: #1c1c1e;
+}
+.text_grey {
+  color: #8e8e93;
+}
+.text-orange {
+  color: #ffa920;
+}
+.text_lightgrey {
+  color: #3a3a3c;
+}
+.bg_primary {
+  background-color: #ffa920;
+}
+.bg_secondary {
+  background-color: #fff5e0;
+}
+.shadow_sm {
+  box-shadow: 0px 4px 26px 0px #42474c14;
+}
+.shadow_light {
+  box-shadow: 0px 4px 18px 0px #42474c1a;
+}
+.yellow_gradient {
+  background: linear-gradient(
+    to top,
+    white 0%,
+    white 10%,
+    #ffa920 0%,
+    #ffa920 80%,
+    #ffa920 80%
+  );
+}

@@ -1,0 +1,73 @@
+h1,
+.font-mulish {
+  font-family: "Mulish" !important;
+  font-optical-sizing: auto;
+  font-weight: 800;
+}
+body,
+html {
+  font-family: "Poppins", sans-serif !important;
+  font-style: normal;
+}
+.btn_primary {
+  background-color: #ffa920 !important;
+  border-radius: 10px !important;
+  padding: 9px 21px !important;
+}
+.navbar_header {
+  position: absolute !important;
+  z-index: 99;
+}
+.bannerText {
+  position: absolute;
+  left: 35.5%;
+  top: 40%;
+}
+
+.bannerForm {
+  position: absolute;
+  left: 26%;
+  top: 55%;
+}
+.nav_tabs .nav-link {
+  background-color: #fff5e0 !important;
+  color: #1c1c1e;
+  padding: 6px 16px !important;
+}
+.nav_tabs .nav-link.active {
+  background-color: #ffa920 !important;
+  color: white;
+}
+.br_starttop-10 {
+  border-radius: 10px 0px 0px 0px !important;
+}
+.br_endtop-10 {
+  border-radius: 0px 10px 0px 0px !important;
+}
+.featured_tabs .nav-link {
+  box-shadow: 0px 4px 18px 0px #42474c1a;
+  color: #3a3a3c !important;
+}
+.featured_tabs .nav-link.active {
+  color: #ffa920 !important;
+  background-color: white !important;
+  font-weight: 600;
+}
+.img-label {
+  position: absolute;
+  left: 3%;
+  top: 5%;
+}
+.save_wishlist {
+  background-image: -webkit-linear-gradient(
+    45deg,
+    transparent 50%,
+    #fff5e0 50%
+  );
+  width: 38px;
+  height: 38px;
+  border-radius: 0px 10px 0px 0px;
+  position: absolute;
+  right: 4.6%;
+  top: 3.2%;
+}

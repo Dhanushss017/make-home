@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/helper.css">
+    <link rel="stylesheet" href="css/mediaquery.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <!--poppins fonts  -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--  Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light pt-3 navbar_header w-100">
+        <div class="container">
+            <div>
+                <a class="navbar-brand" href="#"><img src="images/Logo.svg" alt="logo" title="Logo"
+                        class="img-fluid"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item me-2 align-self-center">
+                        <div class="dropdown">
+                            <button class="btn text-white  fw-500 dropdown-toggle shadow-none" id="dropdownHome"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Home
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownHome">
+                                <li><a class="dropdown-item" href="#">One</a></li>
+                                <li><a class="dropdown-item" href="#">Two</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link text-white fw-500" href="#">Property</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link text-white fw-500" href="#">Page</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link text-white fw-500" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link text-white fw-500" href="#">Blog</a>
+                    </li>
+
+                </ul>
+                <div class="d-flex ">
+                    <div class="me-2 align-self-center">
+                        <button class="btn text-white border-0 shadow-none font-mulish"><i
+                                class="fa-regular fa-user me-2"></i>Register / Login</button>
+                    </div>
+                    <div class="align-self-center">
+                        <button class="btn btn_primary fs-15 text-white fw-500"><i
+                                class="fa-solid fa-house-circle-check me-2"></i> Sell Property </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <!-- banner section -->
+    <section class="position-relative">
+        <div class="container-fluid p-0">
+            <img src="images/banner.webp" alt="banner" class="img-fluid w-100">
+
+        </div>
+        <div class="container">
+            <div class="text-center bannerText">
+                <h1 class="fs-40 text-white fw-700">Find Your Dream Place</h1>
+                <p class="fs-14 text-white font-mulish fw-500">Find your dream home easily and quickly here</p>
+
+            </div>
+            <div class="bannerForm">
+                <ul class="nav nav-pills nav_tabs d-flex justify-content-center mb-0" id="pills-tab" role="tablist">
+                    <li class="nav-item " role="presentation">
+                        <button class="nav-link   fw-600 br_starttop-10 fs-14 active" id="pills-rent-tab"
+                            data-bs-toggle="pill" data-bs-target="#pills-rent" type="button" role="tab"
+                            aria-controls="pills-rent" aria-selected="true">Rent</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link  fw-600 fs-14 br_endtop-10" id="pills-buy-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-buy" type="button" role="tab" aria-controls="pills-buy"
+                            aria-selected="false">Buy</button>
+                    </li>
+
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-rent" role="tabpanel"
+                        aria-labelledby="pills-rent-tab">
+
+                        <div class="card br-10 border-0 shadow_sm">
+                            <div class="card-body">
+                                <form action="">
+                                    <div class="row">
+                                        <div class="col-md-3 mb-3 mb-md-0">
+                                            <input class="form-control fs-14 text_black py-2 br-10" type="text"
+                                                placeholder="Type Keyword.." aria-label="default input example">
+                                        </div>
+                                        <div class="col-md-3 mb-3 mb-md-0 px-1">
+                                            <select class="form-select fs-14 text_black py-2 br-10"
+                                                aria-label="Default select example">
+                                                <option selected>Property Type</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3 mb-3 mb-md-0 px-1">
+                                            <select class="form-select fs-14 text_black py-2 br-10"
+                                                aria-label="Default select example">
+                                                <option selected>Location</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button class="btn btn_primary py-2 fs-14 text-nowrap text-white fw-500">
+                                                Search Now <i class="fa-solid fa-magnifying-glass ms-2"></i></button>
+                                        </div>
+                                    </div>
+
+
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane fade" id="pills-buy" role="tabpanel" aria-labelledby="pills-buy-tab">
+                        <div class="card br-10 border-0 shadow_sm">
+                            <div class="card-body">
+                                <form action="">
+                                    <div class="row">
+                                        <div class="col-md-3 mb-3 mb-md-0">
+                                            <input class="form-control fs-14 text_black py-2 br-10" type="text"
+                                                placeholder="Enter Full Name" aria-label="default input example">
+                                        </div>
+                                        <div class="col-md-3 mb-3 mb-md-0 px-1">
+                                            <input class="form-control fs-14 text_black py-2 br-10" type="number"
+                                                placeholder="Phone Number" aria-label="default input example">
+                                        </div>
+                                        <div class="col-md-3 mb-3 mb-md-0 px-1">
+                                            <select class="form-select fs-14 text_black py-2 br-10"
+                                                aria-label="Default select example">
+                                                <option selected>Location</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button
+                                                class="btn btn_primary w-100 py-2 fs-14 text-nowrap text-white fw-500">
+                                                Submit</button>
+                                        </div>
+                                    </div>
+
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+    </section>
+
+    <!-- Featured section -->
+    <section class="py-5 mt-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h2 class="fs-40 text_darkblack fw-600 text-center">Featured properties</h2>
+                    <p class="fs-14 fw-400 text_grey mb-4 text-center">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Integer vel lobortis justo</p>
+                    <ul class="nav nav-pills featured_tabs mb-5 d-flex justify-content-center" id="pills-tab"
+                        role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link br-10 me-2 fs-14  active" id="pills-houses-tab"
+                                data-bs-toggle="pill" data-bs-target="#pills-houses" type="button" role="tab"
+                                aria-controls="pills-houses" aria-selected="true">Houses</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link br-10 me-2 fs-14" id="pills-smarthome-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-smarthome" type="button" role="tab"
+                                aria-controls="pills-smarthome" aria-selected="false">Smart home</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link br-10 me-2 fs-14" id="pills-apartment-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-apartment" type="button" role="tab"
+                                aria-controls="pills-apartment" aria-selected="false">Apartment</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link br-10 fs-14" id="pills-office-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-office" type="button" role="tab" aria-controls="pills-office"
+                                aria-selected="false">Office</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-houses" role="tabpanel"
+                            aria-labelledby="pills-houses-tab">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-4 mb-3">
+                                    <div class="card shadow_sm border-0 br-10 h-100">
+                                        <div class="card-body">
+                                            <div>
+                                                <img src="images/aparment.png" alt="Apartment" title="Apartment"
+                                                    class="img-fluid w-100">
+
+                                            </div>
+                                            <div class="img-label">
+                                                <div class="mb-1">
+                                                    <img src="images/featured-label.svg" alt="featured"
+                                                        class="img-fluid">
+
+                                                </div>
+                                                <div>
+                                                    <img src="images/forsale-label.svg" alt="forsale" class="img-fluid">
+
+                                                </div>
+                                            </div>
+                                            <div class="save_wishlist text-end">
+                                                <span class="fs-14 text-orange"><i
+                                                        class="fa-regular fa-bookmark me-1"></i></span>
+                                            </div>
+
+                                            <p class="fs-18 fw-600 mt-2 mb-1 text_darkblack">Gorgeous Apartment Building
+                                            </p>
+                                            <p class="fs-12 fw-400 mb-4 mt-2 text_lightgrey"><i
+                                                    class="fa-solid text_grey fa-map me-1"></i> 58 Hullbrook Road,
+                                                Billesley, B13 0LA</p>
+                                            <p class="fs-18 fw-600 text-orange">$7,500</p>
+                                            <p class="text_lightgrey fs-14 fw-400"><span><i
+                                                        class="fa-solid fa-bed text_grey me-1"></i>Beds: <b>4</b></span>
+                                                <span><i class="fa-solid fa-bath ms-2 me-1 text_grey"></i>Baths:
+                                                    <b>2</b></span> <span><i
+                                                        class="fa-solid fa-chart-area ms-2 me-1 text_grey"></i>Sqft:
+                                                    <b>1120</b></span>
+                                            </p>
+                                            <hr>
+                                            <div class="mt-4 d-flex justify-content-between">
+                                                <p class="fs-14 text_darkblack fw-500"><i
+                                                        class="fa-solid fa-plus text-orange me-1 fs-12"></i>Compare</p>
+                                                <p class="fs-14 text_darkblack fw-500">3 Years Ago</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 mb-3">
+                                    <div class="card shadow_sm border-0 br-10 h-100">
+                                        <div class="card-body">
+                                            <div>
+                                                <img src="images/aparment.png" alt="Apartment" title="Apartment"
+                                                    class="img-fluid w-100">
+
+                                            </div>
+                                            <div class="img-label">
+                                                <div class="mb-1">
+                                                    <img src="images/featured-label.svg" alt="featured"
+                                                        class="img-fluid">
+
+                                                </div>
+                                                <div>
+                                                    <img src="images/forsale-label.svg" alt="forsale" class="img-fluid">
+
+                                                </div>
+                                            </div>
+                                            <div class="save_wishlist text-end">
+                                                <span class="fs-14 text-orange"><i
+                                                        class="fa-regular fa-bookmark me-1"></i></span>
+                                            </div>
+
+                                            <p class="fs-18 fw-600 mt-2 mb-1 text_darkblack">Gorgeous Apartment Building
+                                            </p>
+                                            <p class="fs-12 fw-400 mb-4 mt-2 text_lightgrey"><i
+                                                    class="fa-solid text_grey fa-map me-1"></i> 58 Hullbrook Road,
+                                                Billesley, B13 0LA</p>
+                                            <p class="fs-18 fw-600 text-orange">$7,500</p>
+                                            <p class="text_lightgrey fs-14 fw-400"><span><i
+                                                        class="fa-solid fa-bed text_grey me-1"></i>Beds: <b>4</b></span>
+                                                <span><i class="fa-solid fa-bath ms-2 me-1 text_grey"></i>Baths:
+                                                    <b>2</b></span> <span><i
+                                                        class="fa-solid fa-chart-area ms-2 me-1 text_grey"></i>Sqft:
+                                                    <b>1120</b></span>
+                                            </p>
+                                            <hr>
+                                            <div class="mt-4 d-flex justify-content-between">
+                                                <p class="fs-14 text_darkblack fw-500"><i
+                                                        class="fa-solid fa-plus text-orange me-1 fs-12"></i>Compare</p>
+                                                <p class="fs-14 text_darkblack fw-500">3 Years Ago</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 mb-3">
+                                    <div class="card shadow_sm border-0 br-10 h-100">
+                                        <div class="card-body">
+                                            <div>
+                                                <img src="images/aparment.png" alt="Apartment" title="Apartment"
+                                                    class="img-fluid w-100">
+
+                                            </div>
+                                            <div class="img-label">
+                                                <div class="mb-1">
+                                                    <img src="images/featured-label.svg" alt="featured"
+                                                        class="img-fluid">
+
+                                                </div>
+                                                <div>
+                                                    <img src="images/forsale-label.svg" alt="forsale" class="img-fluid">
+
+                                                </div>
+                                            </div>
+                                            <div class="save_wishlist text-end">
+                                                <span class="fs-14 text-orange"><i
+                                                        class="fa-regular fa-bookmark me-1"></i></span>
+                                            </div>
+
+                                            <p class="fs-18 fw-600 mt-2 mb-1 text_darkblack">Gorgeous Apartment Building
+                                            </p>
+                                            <p class="fs-12 fw-400 mb-4 mt-2 text_lightgrey"><i
+                                                    class="fa-solid text_grey fa-map me-1"></i> 58 Hullbrook Road,
+                                                Billesley, B13 0LA</p>
+                                            <p class="fs-18 fw-600 text-orange">$7,500</p>
+                                            <p class="text_lightgrey fs-14 fw-400"><span><i
+                                                        class="fa-solid fa-bed text_grey me-1"></i>Beds: <b>4</b></span>
+                                                <span><i class="fa-solid fa-bath ms-2 me-1 text_grey"></i>Baths:
+                                                    <b>2</b></span> <span><i
+                                                        class="fa-solid fa-chart-area ms-2 me-1 text_grey"></i>Sqft:
+                                                    <b>1120</b></span>
+                                            </p>
+                                            <hr>
+                                            <div class="mt-4 d-flex justify-content-between">
+                                                <p class="fs-14 text_darkblack fw-500"><i
+                                                        class="fa-solid fa-plus text-orange me-1 fs-12"></i>Compare</p>
+                                                <p class="fs-14 text_darkblack fw-500">3 Years Ago</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 mb-3">
+                                    <div class="card shadow_sm border-0 br-10 h-100">
+                                        <div class="card-body">
+                                            <div>
+                                                <img src="images/aparment.png" alt="Apartment" title="Apartment"
+                                                    class="img-fluid w-100">
+
+                                            </div>
+                                            <div class="img-label">
+                                                <div class="mb-1">
+                                                    <img src="images/featured-label.svg" alt="featured"
+                                                        class="img-fluid">
+
+                                                </div>
+                                                <div>
+                                                    <img src="images/forsale-label.svg" alt="forsale" class="img-fluid">
+
+                                                </div>
+                                            </div>
+                                            <div class="save_wishlist text-end">
+                                                <span class="fs-14 text-orange"><i
+                                                        class="fa-regular fa-bookmark me-1"></i></span>
+                                            </div>
+
+                                            <p class="fs-18 fw-600 mt-2 mb-1 text_darkblack">Gorgeous Apartment Building
+                                            </p>
+                                            <p class="fs-12 fw-400 mb-4 mt-2 text_lightgrey"><i
+                                                    class="fa-solid text_grey fa-map me-1"></i> 58 Hullbrook Road,
+                                                Billesley, B13 0LA</p>
+                                            <p class="fs-18 fw-600 text-orange">$7,500</p>
+                                            <p class="text_lightgrey fs-14 fw-400"><span><i
+                                                        class="fa-solid fa-bed text_grey me-1"></i>Beds: <b>4</b></span>
+                                                <span><i class="fa-solid fa-bath ms-2 me-1 text_grey"></i>Baths:
+                                                    <b>2</b></span> <span><i
+                                                        class="fa-solid fa-chart-area ms-2 me-1 text_grey"></i>Sqft:
+                                                    <b>1120</b></span>
+                                            </p>
+                                            <hr>
+                                            <div class="mt-4 d-flex justify-content-between">
+                                                <p class="fs-14 text_darkblack fw-500"><i
+                                                        class="fa-solid fa-plus text-orange me-1 fs-12"></i>Compare</p>
+                                                <p class="fs-14 text_darkblack fw-500">3 Years Ago</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-smarthome" role="tabpanel"
+                            aria-labelledby="pills-smarthome-tab">
+                            <div class="col-md-6 col-lg-4 mb-3">
+                                <div class="card shadow_sm border-0 br-10 h-100">
+                                    <div class="card-body">
+                                        <div>
+                                            <img src="images/aparment.png" alt="Apartment" title="Apartment"
+                                                class="img-fluid w-100">
+
+                                        </div>
+                                        <div class="img-label">
+                                            <div class="mb-1">
+                                                <img src="images/featured-label.svg" alt="featured" class="img-fluid">
+
+                                            </div>
+                                            <div>
+                                                <img src="images/forsale-label.svg" alt="forsale" class="img-fluid">
+
+                                            </div>
+                                        </div>
+                                        <div class="save_wishlist text-end">
+                                            <span class="fs-14 text-orange"><i
+                                                    class="fa-regular fa-bookmark me-1"></i></span>
+                                        </div>
+
+                                        <p class="fs-18 fw-600 mt-2 mb-1 text_darkblack">Gorgeous Apartment Building
+                                        </p>
+                                        <p class="fs-12 fw-400 mb-4 mt-2 text_lightgrey"><i
+                                                class="fa-solid text_grey fa-map me-1"></i> 58 Hullbrook Road,
+                                            Billesley, B13 0LA</p>
+                                        <p class="fs-18 fw-600 text-orange">$7,500</p>
+                                        <p class="text_lightgrey fs-14 fw-400"><span><i
+                                                    class="fa-solid fa-bed text_grey me-1"></i>Beds: <b>4</b></span>
+                                            <span><i class="fa-solid fa-bath ms-2 me-1 text_grey"></i>Baths:
+                                                <b>2</b></span> <span><i
+                                                    class="fa-solid fa-chart-area ms-2 me-1 text_grey"></i>Sqft:
+                                                <b>1120</b></span>
+                                        </p>
+                                        <hr>
+                                        <div class="mt-4 d-flex justify-content-between">
+                                            <p class="fs-14 text_darkblack fw-500"><i
+                                                    class="fa-solid fa-plus text-orange me-1 fs-12"></i>Compare</p>
+                                            <p class="fs-14 text_darkblack fw-500">3 Years Ago</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-apartment" role="tabpanel"
+                            aria-labelledby="pills-apartment-tab">Apartment
+                        </div>
+                        <div class="tab-pane fade" id="pills-office" role="tabpanel" aria-labelledby="pills-office-tab">
+                            Office
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Find Neighborhood section -->
+    <section class="py-5">
+        <div class="container-fluid p-0">
+            <h2 class="fs-40 text_darkblack fw-600 text-center">Find your neighborhood</h2>
+            <p class="fs-14 fw-400 text_grey mb-4 text-center">Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Integer vel lobortis justo</p>
+
+            <div class="buildingsNeighbor owl-carousel owl-theme">
+                <div class="item"><img src="images/building.png" alt="Building" class="img-fluid"></div>
+                <div class="item"><img src="images/building.png" alt="Building" class="img-fluid"></div>
+                <div class="item"><img src="images/building.png" alt="Building" class="img-fluid"></div>
+                <div class="item"><img src="images/building.png" alt="Building" class="img-fluid"></div>
+                <div class="item"><img src="images/building.png" alt="Building" class="img-fluid"></div>
+                <div class="item"><img src="images/building.png" alt="Building" class="img-fluid"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- bootstrap cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- owlcarousel -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/owl.js"></script>
+</body>
+
+</html>
