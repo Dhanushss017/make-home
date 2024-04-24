@@ -154,3 +154,6 @@ top: 33%;
   position: absolute;
   top: 50%;
 }
+.img_overlay{
+  filter: brightness(50%);
+}
