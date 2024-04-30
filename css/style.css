@@ -71,7 +71,7 @@ html {
   right: 4.6%;
   top: 3.2%;
 }
-.imgtext{
+.imgtext {
   position: absolute;
   left: 7%;
   bottom: 2%;
@@ -96,15 +96,14 @@ html {
   flex-direction: column;
   place-content: center;
   border-radius: 10px;
-  transition: opacity .8s, visibility .9s;
+  transition: opacity 0.8s, visibility 0.9s;
 }
 
 .owlDots .owl-dot.active span {
   height: 5px !important;
   width: 64px !important;
   display: block !important;
-  background-color: 
-  #FFA920 !important;
+  background-color: #ffa920 !important;
   border-radius: 0px !important;
 }
 
@@ -112,48 +111,59 @@ html {
   height: 5px !important;
   width: 40px !important;
   display: block !important;
-  background-color: 
-  #FFF5E0 !important;
+  background-color: #fff5e0 !important;
   margin-top: 30px !important;
   border-radius: 0px !important;
 }
-.happyCustomers{
+.happyCustomers {
   position: absolute;
-z-index: -1;
-top: 33%;
+  z-index: -1;
+  top: 33%;
 }
-.testimonials_img{
-  position:absolute;
+.testimonials_img {
+  position: absolute;
   top: -13%;
   left: 44%;
 }
-.squarebox{
+.squarebox {
   width: 60px;
   height: 60px;
   border-radius: 10px;
-  background-color: 
-  #D9D9D9;
+  background-color: #d9d9d9;
 }
-.contactsellerbtn{
+.contactsellerbtn {
   position: absolute;
   left: 29%;
   bottom: -15%;
 }
-.border_bottom{
-  border-bottom:1px solid rgb(147 140 140 / 21%);
+.border_bottom {
+  border-bottom: 1px solid rgb(147 140 140 / 21%);
 }
-.textfield{
+.textfield {
   font-size: 14px !important;
 }
-.btnsignup{
+.btnsignup {
   background-color: #3a3a3c !important;
   padding: 9px 18px !important;
   font-size: 14px !important;
 }
-.mobilebannerform{
+.mobilebannerform {
   position: absolute;
   top: 50%;
 }
-.img_overlay{
+.img_overlay {
   filter: brightness(50%);
+}
+.border_grey {
+  border: 1px solid rgb(85 86 85 / 13%);
+}
+/* .owl-carousel.owl-loaded, .owl-carousel .owl-stage-outer {
+  overflow: visible !important;
+} */
+.owl-item {
+  opacity: 0;
+  transition: opacity .75s linear;
+}
+.owl-item.active {
+  opacity: 1;
 }
